@@ -90,14 +90,14 @@ colnames(merged_df) <- c("subject"
 
 ncolumns <- ncol(merged_df)
 
-tiny_df <- aggregate(merged_df[,3:ncolumns], merged_df[,1:2], function(x) mean(x))
-tiny_df <- tiny_df[order(tiny_df[,1], tiny_df[,2]),]
+tidy_df <- aggregate(merged_df[,3:ncolumns], merged_df[,1:2], function(x) mean(x))
+tidy_df <- tidy_df[order(tidy_df[,1], tidy_df[,2]),]
 
-colnames(tiny_df) <- c("subject"
+colnames(tidy_df) <- c("subject"
                        ,"activity"
-                       ,paste(colnames(tiny_df[3:ncolumns]), "_average", sep = ""))
+                       ,paste(colnames(tidy_df[3:ncolumns]), "_average", sep = ""))
 
-write.table(tiny_df, file="tiny_data.txt", row.names = FALSE)
+write.table(tidy_df, file="tidy_data.txt", row.names = FALSE)
 
 # Remove all variables except merged_df and tiny_df
-rm(list=setdiff(ls(), c("merged_df", "tiny_df")))
+rm(list=setdiff(ls(), c("merged_df", "tidy_df")))
