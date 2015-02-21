@@ -104,4 +104,4 @@ colnames(tidy_df) <- c("subject"
 write.table(tidy_df, file="tidy_data.txt", row.names = FALSE)
 
 # Remove all variables except merged_df and tiny_df
-rm(list=setdiff(ls(), c("merged_df", "tidy_df")))
+rm(list=setdiff(ls(), "tidy_df"))
