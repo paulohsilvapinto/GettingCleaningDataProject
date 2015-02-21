@@ -94,7 +94,7 @@ tidy_df <- tidy_df[order(tidy_df[,1], tidy_df[,2]),]
 
 colnames(tidy_df) <- c("subject"
                        ,"activity"
-                       ,paste(colnames(tidy_df[3:ncolumns]), "_average", sep = ""))
+                       ,paste(colnames(tidy_df[3:ncolumns]), "-Average", sep = ""))
 
 
 #------------------------------------------
