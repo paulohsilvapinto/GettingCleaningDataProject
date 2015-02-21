@@ -54,8 +54,7 @@ merged_df <- rbind(train_df, test_df)
 
 features_description_df <- read.table(features_file)
 
-measures_columns <- sort(c(grep("mean", features_description_df[,2]),
-                      grep("std", features_description_df[,2])))
+measures_columns <- sort(c(grep("(mean|std)\\(\\)", features_description_df[,2])))
 
 df_columns=c(1,2, measures_columns+2)
 
@@ -96,6 +95,11 @@ tidy_df <- tidy_df[order(tidy_df[,1], tidy_df[,2]),]
 colnames(tidy_df) <- c("subject"
                        ,"activity"
                        ,paste(colnames(tidy_df[3:ncolumns]), "_average", sep = ""))
+
+
+#------------------------------------------
+# 6. Write file
+#-----------------------------------------
 
 write.table(tidy_df, file="tidy_data.txt", row.names = FALSE)
 
