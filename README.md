@@ -1,7 +1,8 @@
 ## Getting and Cleaning Data Project
 
 ####About
-This file will explain each step performed into run_analysis.R script to acquire the tidy data set described into codebook.
+This file will explain each step performed into run_analysis.R script to acquire the tidy data set described into codebook. The raw data can be downloaded here: 
+  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 ####0. Initial step
 First of all, every Samsung's data file path is set into variables and the root folder is considered to be [YourWorkingDirectory]/UCI HAR Dataset.
@@ -32,7 +33,7 @@ Next, sort the tidy data to become subject and activity ascendant and, then, con
 ####6. Writing tidy data
 The last step writes a tidy_data.txt file into the working directory.
 
-The script returns the final tidy data.frame and the merged data.frame right before the aggregation.
+The script returns the final tidy data.frame.
 
 
 
