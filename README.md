@@ -4,6 +4,8 @@
 This file will explain each step performed into run_analysis.R script to acquire the tidy data set described into codebook. The raw data can be downloaded here: 
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+To execute this script, you have to download the run_analysis.R into your working directory an then run: source("run_analysis.R").
+
 ####0. Initial step
 First of all, every Samsung's data file path is set into variables and the root folder is considered to be [YourWorkingDirectory]/UCI HAR Dataset.
 If this folder didn't exists, the script checks if there is a .zip file of Samsung's data and extract it.
