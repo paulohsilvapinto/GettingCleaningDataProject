@@ -54,7 +54,7 @@ merged_df <- rbind(train_df, test_df)
 
 features_description_df <- read.table(features_file)
 
-measures_columns <- sort(c(grep("(mean|std)\\(\\)", features_description_df[,2])))
+measures_columns <- sort(grep("(mean|std)\\(\\)", features_description_df[,2]))
 
 df_columns=c(1,2, measures_columns+2)
 
